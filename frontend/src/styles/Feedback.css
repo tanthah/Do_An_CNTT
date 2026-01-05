@@ -1,0 +1,200 @@
+/* frontend/src/styles/Feedback.css */
+
+.feedback-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+}
+
+.star-rating .star {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #ddd;
+    transition: all 0.2s ease;
+}
+
+.star-rating .star:hover,
+.star-rating .star.active {
+    color: #ffc107;
+    transform: scale(1.1);
+}
+
+.star-rating .star.hovered {
+    color: #ffc107;
+}
+
+.feature-rating-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.feature-rating-item:last-child {
+    border-bottom: none;
+}
+
+.feature-rating-item .label {
+    font-weight: 500;
+}
+
+.feature-rating-item .stars {
+    display: flex;
+    gap: 3px;
+}
+
+.feature-rating-item .star {
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: #ddd;
+    transition: color 0.2s;
+}
+
+.feature-rating-item .star:hover,
+.feature-rating-item .star.active {
+    color: #ffc107;
+}
+
+.feedback-type-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.feedback-type-btn {
+    padding: 8px 16px;
+    border: 2px solid #dee2e6;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.feedback-type-btn:hover {
+    border-color: #0d6efd;
+}
+
+.feedback-type-btn.active {
+    border-color: #0d6efd;
+    background: #e7f1ff;
+    color: #0d6efd;
+}
+
+/* Popup styles */
+.feedback-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.feedback-popup {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 450px;
+    width: 90%;
+    animation: popupSlide 0.3s ease;
+}
+
+@keyframes popupSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feedback-popup h4 {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.popup-stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.popup-stars .star {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #ddd;
+    transition: all 0.2s;
+}
+
+.popup-stars .star:hover,
+.popup-stars .star.active {
+    color: #ffc107;
+    transform: scale(1.15);
+}
+
+/* Admin feedback table */
+.feedback-status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-reviewed {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.status-resolved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.rating-stars {
+    color: #ffc107;
+}
+
+.feedback-message-preview {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.my-feedbacks-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.my-feedback-item {
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.my-feedback-item .rating {
+    color: #ffc107;
+}

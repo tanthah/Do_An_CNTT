@@ -1,0 +1,129 @@
+/* frontend/src/index.css */
+:root {
+  --primary: #4A90E2;
+  --secondary: #6C757D;
+  --success: #28A745;
+  --danger: #DC3545;
+  --warning: #FFC107;
+  --info: #17A2B8;
+  --light: #F8F9FA;
+  --dark: #343A40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7fa;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 72px;
+}
+
+.app-container {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.app-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .app-content {
+    margin-left: 250px;
+  }
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 72px;
+  left: -250px;
+  width: 250px;
+  height: calc(100vh - 72px);
+  background: white;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  border-right: 1px solid #e9ecef;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    left: 0;
+  }
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-nav {
+  padding: 10px 0;
+}
+
+.sidebar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #495057;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 0 20px 20px 0;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.sidebar-nav .nav-link:hover {
+  background-color: #f8f9fa;
+  color: var(--primary);
+}
+
+.sidebar-nav .nav-link.active {
+  background-color: #e7f3ff;
+  color: var(--primary);
+  border-right: 3px solid var(--primary);
+}
+
+.nav-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}

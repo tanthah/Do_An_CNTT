@@ -1,0 +1,150 @@
+/* frontend/src/styles/Listening.css */
+
+.listening-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Audio Player */
+.audio-player-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.audio-player-btn:hover {
+    transform: translateY(-2px);
+}
+
+.audio-player-btn.playing {
+    animation: soundwave 0.5s infinite alternate;
+}
+
+@keyframes soundwave {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Input Section */
+.text-input-section textarea {
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    padding: 1rem;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+    resize: none;
+}
+
+.text-input-section textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Sample Audio Card - Clean white background */
+.sample-audio-card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.sample-audio-card .card-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Sample Text Display - Simple white background */
+.sample-text-display-simple {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+}
+
+.sample-text-display-simple p {
+    margin-bottom: 0.25rem;
+}
+
+.sample-text-display-simple p:last-child {
+    margin-bottom: 0;
+}
+
+/* AI Input Section */
+.ai-input-section {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.ai-input-section .card-header {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    border: none;
+}
+
+.ai-input-section textarea {
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    resize: none;
+}
+
+.ai-input-section textarea:focus {
+    border-color: #11998e;
+    box-shadow: 0 0 0 3px rgba(17, 153, 142, 0.1);
+}
+
+/* AI Content Card */
+.ai-content-card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.ai-content-card .card-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* AI Content Display - Simple white background */
+.ai-content-display {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+}
+
+.ai-content-display p {
+    margin-bottom: 0.25rem;
+}
+
+.ai-content-display p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .sample-text-display-simple,
+    .ai-content-display {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
